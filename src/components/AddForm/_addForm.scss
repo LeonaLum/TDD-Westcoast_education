@@ -1,0 +1,79 @@
+.add-form{
+  @include Flexbox(column, center, flex-start);
+  height: inherit;
+  width: inherit;
+  h2{
+    font-weight: 300;
+    margin-top: 30px;
+      font-size: 1.7rem;
+      padding: 30px auto;
+      color: var(--black);
+  }
+  
+  legend{
+    color: var(--black);
+    background-color: inherit;
+    margin-top: 10px;
+    strong{
+      background-color: inherit;
+    }
+  }
+  h3{
+    background-color: inherit;
+    color: var(--black);
+    margin: 20px 0px;
+    font-weight: 400;
+  }
+  .form-section{
+    background-color: var(--secondary);
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    @media only screen and(min-width: 600px){ 
+      @include Flexbox(column, center, center);
+    }
+    .field-section{
+      background-color: inherit;
+      @include Flexbox(column, flex-start, space-between);
+      padding: 10px;
+        @media only screen and(min-width: 600px){ 
+          @include Flexbox(row, center, space-between);
+          width: 80%;
+        }
+      label{
+        color: var(--black);
+        background-color: inherit;
+        font-weight: 400;
+        font-size: 0.8em;
+        padding-bottom: 10px;
+      }
+      input{
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        background-color: var(--white);
+          @media only screen and(min-width: 600px){ 
+            width: auto;
+          }
+      }
+      input[type="radio"]{
+        height: 20px;
+        width: 20px;
+      }
+      input[type="date"]{
+        margin-top: 5px;
+      }
+    }
+    .form-footer{
+      padding: 20px;
+      width: 100%;
+      background-color: inherit;
+        @media only screen and(min-width: 600px){ 
+          @include Flexbox(row, center, center);
+          width: 80%;
+        }
+    }
+  }
+
+}

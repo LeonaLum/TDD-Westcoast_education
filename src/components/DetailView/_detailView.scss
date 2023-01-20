@@ -1,0 +1,40 @@
+.detail-view{
+  @include Flexbox(column, center, center);
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  .detail-list{
+    background-color: inherit;
+    h2{
+      margin-top: 30px;
+      font-size: 1.7rem;
+      padding: 30px auto;
+      color: var(--black);
+    }
+    li{
+      padding: 20px;
+      border-left: solid 1px var(--grey);
+      p{
+        @include Flexbox(column, flex-start, space-between);
+        text-align: left;
+        color: var(--primary);
+        margin-bottom: 10px;
+        strong{
+          font-weight: 600;
+        }
+        span{
+          width: 50%;
+        }
+        .info{
+          color: var(--black);
+        }
+        @media only screen and(min-width: 600px){ 
+          @include Flexbox(row, flex-start, space-between);
+        }
+      }
+      .li-footer{
+        margin-top: 40px;
+      }
+    }
+  }
+}

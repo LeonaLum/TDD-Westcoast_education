@@ -1,0 +1,87 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Sql basics",
+      "courseNumber": "1",
+      "length": "10/06/2023 - 10/10/2023",
+      "description": "lorem ipsum dolor",
+      "startDate": "10/06/2023"
+    },
+    {
+      "id": "2",
+      "title": "C++ intro",
+      "courseNumber": "2",
+      "length": "11/07/2023 - 10/11/2023",
+      "description": "lorem ipsum dolor",
+      "startDate": "11/07/2023"
+    },
+    {
+      "id": 3,
+      "title": "sfdhj",
+      "courseNumber": "35467",
+      "length": "2023-01-10 - 2023-01-29",
+      "description": "seftrfhj",
+      "startDate": "2023-01-10"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "firstName": "Leo",
+      "lastName": "Anderson",
+      "personalNr": "1980-11-11-2222",
+      "email": "Leoand@outlook.com",
+      "phoneNr": "070-3379764",
+      "skills": [
+        "math",
+        "c++"
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "wdgh",
+      "lastName": "wsegh",
+      "personalNr": "45678",
+      "email": "dfghj",
+      "phoneNr": "fdgh",
+      "skills": "dfghj"
+    },
+    {
+      "id": 3,
+      "firstName": "qwert",
+      "lastName": "qwerftg",
+      "personalNr": "243567",
+      "email": "wegfh",
+      "phoneNr": "adsfgh",
+      "skills": "sdfghn"
+    },
+    {
+      "id": 4,
+      "firstName": "heeeee",
+      "lastName": "efghjk",
+      "personalNr": "43567",
+      "email": "qaegh",
+      "phoneNr": "43567",
+      "skills": "sdfghj"
+    },
+    {
+      "id": 5,
+      "firstName": "lollo",
+      "lastName": "lapin",
+      "personalNr": "4567",
+      "email": "sdfghjm",
+      "phoneNr": "42567",
+      "skills": "efj"
+    },
+    {
+      "id": 6,
+      "firstName": "",
+      "lastName": "",
+      "personalNr": "",
+      "email": "",
+      "phoneNr": "",
+      "skills": ""
+    }
+  ]
+}

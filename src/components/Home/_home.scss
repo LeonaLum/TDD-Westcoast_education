@@ -1,0 +1,21 @@
+.home{
+  @include Flexbox(column, center, flex-start);
+  padding-top: 50px;
+  height: 100vh;
+  width: 100%;
+    @media only screen and(min-width: 600px){ 
+      width: 70%;
+    }
+  h2{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--black);
+    @media only screen and(min-width: 600px){ 
+      font-size: 1.8rem;
+    }
+  }
+  p{
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}

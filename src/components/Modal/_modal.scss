@@ -1,0 +1,19 @@
+.modal{
+  @include Flexbox(column, center, center);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.389);
+  .modal-inner{
+    @include Flexbox(column, center, center);
+    padding: 30px 20px;
+    border-radius: 5px;
+    height: 30%;
+    width: 50%;
+    background-color: white;
+    .modal-header{
+      color: var(--primary);
+      padding-bottom: 20px;
+    }
+  }
+}
