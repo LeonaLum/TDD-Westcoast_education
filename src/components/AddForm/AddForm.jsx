@@ -90,13 +90,15 @@ const submitData = (e, choice) => {
       <h2>Add new</h2>
       <section className="form-section">
         <legend role="heading">What do you want to add?</legend>
-          <section className="field-section">
-              <label htmlFor="teacher">A Teacher</label>
-              <input type="radio" name="choice" id="teacher" value="teacher" onClick={() => choice("teacher")}/>
-          </section>
-          <section className="field-section">
-              <label htmlFor="course">A course</label>
-              <input type="radio" name="choice" id="course" value="course" onClick={() => choice("course")} />
+          <section className="field-section choice">
+              <div className="radio-choices">
+                <label htmlFor="teacher">A Teacher</label>
+                <input type="radio" name="choice" id="teacher" value="teacher" onClick={() => choice("teacher")}/>
+              </div>
+              <div className="radio-choices">
+                <label htmlFor="course">A course</label>
+                <input type="radio" name="choice" id="course" value="course" onClick={() => choice("course")} />
+              </div>
           </section>
       </section>
 
@@ -105,24 +107,37 @@ const submitData = (e, choice) => {
           <h3>Add a new course</h3>
           <section className="field-section">
               <label htmlFor="courseNumber">Coursenumber:</label>
-              <input type="text" id="courseNumber" name="courseNumber" ref={courseNumberRef}/>
+              <input type="text" 
+                     id="courseNumber" 
+                     name="courseNumber" 
+                     ref={courseNumberRef}
+                     required/>
           </section>
           <section className="field-section">
               <label htmlFor="title">Course title:</label>
-              <input type="text" id="title" name="title" ref={titleRef}/>
+              <input type="text" 
+                     id="title" 
+                     name="title" 
+                     ref={titleRef}
+                     required/>
           </section>
           <section className="field-section">
               <label htmlFor="length">Course length:</label>
-              <input type="date" id="length" name="length" ref={firstLengthRef}/>
-              <input type="date" id="length" name="length" ref={secondLengthRef}/>
+              <input type="date" id="length" name="length" ref={firstLengthRef} required/>
+              <input type="date" id="length" name="length" ref={secondLengthRef} required/>
           </section>
           <section className="field-section">
               <label htmlFor="description">Description of the course:</label>
-              <input type="text" id="description" name="description" ref={descriptionRef}/>
+              <input type="text" 
+                     id="description" 
+                     name="description" 
+                     ref={descriptionRef}
+                     required/>
           </section>
           <footer className="form-footer">
-            <Button text="Submit" func={(e) => submitData(e, 
-              "courses")}/>
+            <Button text="Submit" 
+                    func={(e) => submitData(e,"courses")}
+                    type={"submit"}/>
           </footer>
         </section>
       }

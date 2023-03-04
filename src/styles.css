@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --white: rgb(253, 253, 242);
-  --black: rgb(77, 71, 71);
-  --primary: rgb(0, 84, 201);
-  --secondary: rgb(239, 230, 230);
+  --white: rgb(179, 179, 179);
+  --offwhite: white;
+  --primary: rgb(3, 130, 214);
+  --secondary: rgb(228, 75, 4);
+  /*TEXTS*/
+  --textLight: rgb(94, 90, 90);
+  --textMedium: rgb(77, 71, 71);
+  --textDark: rgb(56, 56, 56);
   --grey: rgb(238, 224, 224);
 }
 
@@ -15,7 +19,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 100%;
-  background-color: var(--white);
+  background-color: var(--offwhite);
 }
 
 ul {
@@ -89,49 +93,35 @@ h2 {
 }
 
 .list .list-item {
-  background-color: inherit;
   padding: 30px 20px;
   width: 100%;
   border-top: var(--grey) 1px solid;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .list .list-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    min-width: 300px;
     max-width: 50%;
   }
 }
 
 .list .list-item h3 {
-  font-size: 1.3rem;
-  color: var(--primary);
+  font-size: 1.2rem;
+  color: var(--textLight);
   font-weight: 900;
 }
 
 .list .list-item p {
   margin-top: 7px;
   font-size: 0.8rem;
-  color: var(--primary);
+  color: var(--textMedium);
 }
 
 .list .list-item .li-footer {
-  width: 100%;
   padding-top: 30px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .list .list-item .li-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -177,7 +167,7 @@ h2 {
   margin-top: 30px;
   font-size: 1.7rem;
   padding: 30px auto;
-  color: var(--black);
+  color: var(--textDark);
 }
 
 .detail-view .detail-list li {
@@ -199,24 +189,28 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 20px;
   text-align: left;
-  color: var(--primary);
+  color: var(--textLight);
   margin-bottom: 10px;
+  border-bottom: 1px solid var(--grey);
 }
 
 .detail-view .detail-list li p strong {
-  font-weight: 600;
+  font-weight: 700;
+  padding-bottom: 5px;
 }
 
 .detail-view .detail-list li p span {
+  text-transform: capitalize;
   width: 50%;
 }
 
 .detail-view .detail-list li p .info {
-  color: var(--black);
+  color: var(--textLight);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .detail-view .detail-list li p {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -231,11 +225,49 @@ h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    border-bottom: none;
+    padding-bottom: 0px;
   }
 }
 
 .detail-view .detail-list li .li-footer {
-  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.detail-view .detail-list li .li-footer button {
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+  .detail-view .detail-list li .li-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+  }
 }
 
 .add-form {
@@ -261,28 +293,25 @@ h2 {
   margin-top: 30px;
   font-size: 1.7rem;
   padding: 30px auto;
-  color: var(--black);
+  color: var(--textMedium);
 }
 
 .add-form legend {
-  color: var(--black);
+  color: var(--textMedium);
   background-color: inherit;
   margin-top: 10px;
-}
-
-.add-form legend strong {
-  background-color: inherit;
+  padding-left: 10px;
 }
 
 .add-form h3 {
+  padding-left: 10px;
   background-color: inherit;
-  color: var(--black);
+  color: var(--textMedium);
   margin: 20px 0px;
   font-weight: 400;
 }
 
 .add-form .form-section {
-  background-color: var(--secondary);
   width: 100%;
   margin-top: 10px;
   padding: 10px;
@@ -339,24 +368,35 @@ h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 80%;
+    width: 50%;
   }
 }
 
 .add-form .form-section .field-section label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: var(--black);
   background-color: inherit;
   font-weight: 400;
   font-size: 0.8em;
-  padding-bottom: 10px;
 }
 
 .add-form .form-section .field-section input {
   width: 100%;
   border-radius: 5px;
   padding: 5px;
-  border: none;
-  background-color: var(--white);
+  border: 1px solid var(--grey);
 }
 
 @media only screen and (min-width: 600px) {
@@ -374,10 +414,84 @@ h2 {
   margin-top: 5px;
 }
 
+.add-form .form-section .choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 30px;
+}
+
+@media only screen and (min-width: 400px) {
+  .add-form .form-section .choice {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.add-form .form-section .choice .radio-choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  .add-form .form-section .choice .radio-choices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 10px;
+  }
+}
+
+.add-form .form-section .choice .radio-choices label {
+  padding: 0px 10px 0px 0px;
+}
+
 .add-form .form-section .form-footer {
-  padding: 20px;
+  padding: 40px 10px 30px 10px;
   width: 100%;
-  background-color: inherit;
 }
 
 @media only screen and (min-width: 600px) {
@@ -395,7 +509,17 @@ h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 80%;
+    width: 50%;
+  }
+}
+
+.add-form .form-section .form-footer button {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .add-form .form-section .form-footer button {
+    width: 50%;
   }
 }
 
@@ -425,9 +549,9 @@ h2 {
 }
 
 .home h2 {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: 900;
-  color: var(--black);
+  color: var(--primary);
 }
 
 @media only screen and (min-width: 600px) {
@@ -443,17 +567,17 @@ h2 {
 
 .button {
   padding: 10px 20px;
-  background-color: #244af4;
+  background-color: var(--secondary);
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 0.8rem;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.7px;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: #0d29a4;
+  background-color: var(--secondary);
 }
 
 .modal {
@@ -505,20 +629,19 @@ h2 {
 .nav {
   width: inherit;
   height: 100%;
-  background-color: #1052d6;
+  color: var(--textLight);
 }
 
 .nav h1 {
+  color: var(--primary);
   text-align: center;
   width: 100%;
   font-weight: 900;
   font-size: 1.2rem;
   padding: 10px 20px;
-  background-color: inherit;
-  color: var(--white);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .nav h1 {
     text-align: left;
   }
@@ -542,11 +665,13 @@ h2 {
       flex-wrap: wrap;
   width: inherit;
   min-height: 100%;
-  background-color: #1052d6;
   padding: 10px 0px;
+  -webkit-box-shadow: 0 8px 6px -6px var(--grey);
+          box-shadow: 0 8px 6px -6px var(--grey);
+  margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -556,15 +681,21 @@ h2 {
 }
 
 .nav ul li {
-  background-color: inherit;
   padding: 10px 20px;
   border-bottom: 1px solid rgba(255, 0, 0, 0);
 }
 
 .nav ul li a {
-  font-size: 0.9em;
-  font-weight: 200;
-  background-color: inherit;
-  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--textMedium);
+  padding-bottom: 10px;
+  -webkit-transition: ease-in-out 0.10s;
+  transition: ease-in-out 0.10s;
+}
+
+.nav ul li a:hover {
+  color: var(--primary);
 }
 /*# sourceMappingURL=styles.css.map */

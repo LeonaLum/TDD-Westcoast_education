@@ -12,28 +12,26 @@
     min-height: 100%;
     padding: 10px;
     .list-item{
-      background-color: inherit;
       padding: 30px 20px;
       width: 100%;
       border-top: var(--grey) 1px solid;
-      @media only screen and(min-width: 600px){ 
-        @include Flexbox(column, center, space-evenly);
+      @media only screen and(min-width: 400px){ 
+        min-width: 300px;
         max-width: 50%;
       }
       h3{
-        font-size: 1.3rem;
-        color: var(--primary);
+        font-size: 1.2rem;
+        color: var(--textLight);
         font-weight: 900;
       }
       p{
         margin-top: 7px;
         font-size: 0.8rem;
-        color: var(--primary);
+        color: var(--textMedium);
       }
       .li-footer{
-        width: 100%;
         padding-top: 30px;
-        @media only screen and(min-width: 600px){ 
+        @media only screen and(min-width: 400px){ 
           @include Flexbox(column, center, space-evenly);
           max-width: 50%;
         }

@@ -2,16 +2,15 @@
   .nav{
     width: inherit;
     height: 100%;
-    background-color: rgb(16, 82, 214);
+    color: var(--textLight);
     h1{
+      color: var(--primary);
       text-align: center;
       width: 100%;
       font-weight: 900;
       font-size: 1.2rem;
       padding: 10px 20px;
-      background-color: inherit;
-      color: var(--white);
-      @media only screen and(min-width: 600px){
+      @media only screen and(min-width: 400px){
         text-align: left;
       }
     }
@@ -20,20 +19,26 @@
       flex-wrap: wrap;
       width: inherit;
       min-height: 100%;
-      background-color: rgb(16, 82, 214);
       padding: 10px 0px;
-      @media only screen and(min-width: 600px){
+      box-shadow: 0 8px 6px -6px var(--grey);
+      margin-bottom: 10px;
+      @media only screen and(min-width: 400px){
         flex-direction: row;
       }
       li{
-        background-color: inherit;
         padding: 10px 20px;
         border-bottom: 1px solid rgba(255, 0, 0, 0);
+        
         a{
-          font-size: 0.9em;
-          font-weight: 200;
-          background-color: inherit;
-          color: var(--white);
+          text-transform: uppercase;
+          font-size: 0.7em;
+          font-weight: 400;
+          color: var(--textMedium);
+          padding-bottom: 10px;
+          transition: ease-in-out 0.10s;
+          &:hover{
+            color: var(--primary);
+          }
         }
       }
     }

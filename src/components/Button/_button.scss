@@ -1,13 +1,13 @@
 .button{
   padding: 10px 20px;
-  background-color: rgb(36, 74, 244);
+  background-color: var(--secondary);
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 0.8rem;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.7px;
   &:hover{
     cursor: pointer;
-    background-color: rgb(13, 41, 164);
+    background-color: var(--secondary);
   }
 }

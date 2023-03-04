@@ -6,8 +6,6 @@ const List = ({data, type }) => {
   const navigate = useNavigate();
 
   const navigateToPage = (path) => {
-    //Ville använda useNavigate() här men testet sa att usenavigate inte 
-    //kan användas utanför router komponenter?. :(
     navigate(path);
   }
 
@@ -32,6 +30,7 @@ const List = ({data, type }) => {
             <Button 
               text="See more" 
               func={() => navigateToPage(`/${type}/${item.id}`)}
+              minWidth="100%"
             />
            </footer>
         </li>

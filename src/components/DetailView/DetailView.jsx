@@ -53,9 +53,10 @@ const DetailView = () => {
              ))
              }
           <footer className="li-footer" data-testid="footer">
-            {type == "courses" &&
-              <Button  text={"Take course"} data-testid="footer-button"  />
-            }
+              <Button  text={type == "courses" ? "Take this course" : "Contact"} data-testid="footer-button"  
+              minHeight="50px"
+              fontSize="15px"
+              fontWeight="700"/>
            </footer>
         </li>
         )
