@@ -5,15 +5,15 @@
   padding: 10px;
   .detail-list{
     background-color: inherit;
+    @media only screen and(min-width: 400px){ 
+      border-left: solid 1px var(--grey);
+      padding: 0px 20px 20px 20px;
+    }
     h2{
-      margin-top: 30px;
-      font-size: 1.7rem;
-      padding: 30px auto;
-      color: var(--textDark);
+      @include headingH2;
     }
     li{
-      padding: 20px;
-      border-left: solid 1px var(--grey);
+      padding: 5px;
       p{
         @include Flexbox(column, flex-start, space-between);
         padding-bottom: 20px;

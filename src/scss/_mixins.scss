@@ -5,10 +5,22 @@
   justify-content: $justify;
 }
 
+@mixin headingH2{
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4rem;
+  padding: 30px 20px;
+  background-color: inherit;
+  color: var(--black);
+}
+
 @mixin Radius{
   border-radius: 5px;
 }
+@mixin thinBorder{
+  border-bottom: var(--grey) 1px solid;
 
+}
 @mixin Pointer{
   cursor: pointer;
 }

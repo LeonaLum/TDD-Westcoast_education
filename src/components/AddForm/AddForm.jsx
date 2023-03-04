@@ -95,7 +95,7 @@ const submitData = (e, choice) => {
                 <label htmlFor="teacher">A Teacher</label>
                 <input type="radio" name="choice" id="teacher" value="teacher" onClick={() => choice("teacher")}/>
               </div>
-              <div className="radio-choices">
+              <div className="radio-choices border">
                 <label htmlFor="course">A course</label>
                 <input type="radio" name="choice" id="course" value="course" onClick={() => choice("course")} />
               </div>
@@ -123,8 +123,10 @@ const submitData = (e, choice) => {
           </section>
           <section className="field-section">
               <label htmlFor="length">Course length:</label>
-              <input type="date" id="length" name="length" ref={firstLengthRef} required/>
-              <input type="date" id="length" name="length" ref={secondLengthRef} required/>
+                <div className="multiple-inputs">
+                <input type="date" id="length" name="length" ref={firstLengthRef} required/>
+                <input type="date" id="length" name="length" ref={secondLengthRef} required/>
+              </div>
           </section>
           <section className="field-section">
               <label htmlFor="description">Description of the course:</label>

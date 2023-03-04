@@ -2,12 +2,12 @@
   @include Flexbox(column, center, flex-start);
   height: inherit;
   width: inherit;
+  padding-top: 10px;
+  @media only screen and(min-width: 400px){ 
+   width: 100%;
+  }
   h2{
-    font-weight: 300;
-    margin-top: 30px;
-    font-size: 1.7rem;
-    padding: 30px auto;
-    color: var(--textMedium);
+    @include headingH2;
   }
   
   legend{
@@ -15,6 +15,9 @@
     background-color: inherit;
     margin-top: 10px;
     padding-left: 10px;
+    @media only screen and(min-width: 400px){
+      text-align: center;
+    }
     strong{
 
     }
@@ -22,24 +25,24 @@
   h3{
     padding-left: 10px;
     background-color: inherit;
-    color: var(--textMedium);
+    color: var(--secondary);
     margin: 20px 0px;
     font-weight: 400;
   }
   .form-section{
     width: 100%;
     margin-top: 10px;
-    padding: 10px;
-    @media only screen and(min-width: 600px){ 
+    padding-right: 10px;
+    @media only screen and(min-width: 400px){ 
       @include Flexbox(column, center, center);
     }
     .field-section{
       background-color: inherit;
       @include Flexbox(column, flex-start, space-between);
       padding: 10px;
-        @media only screen and(min-width: 600px){ 
+        @media only screen and(min-width: 400px){ 
           @include Flexbox(row, center, space-between);
-          width: 50%;
+          width: 400px;
         }
       label{
         @include Flexbox(column, center, center);
@@ -47,14 +50,20 @@
         background-color: inherit;
         font-weight: 400;
         font-size: 0.8em;
+        padding-bottom: 10px;
+        @media only screen and(min-width: 400px){ 
+          padding-bottom: 0px;
+        }
       }
       input{
+        font-size: 12px;
+        letter-spacing: 0.5px;
         width: 100%;
         border-radius: 5px;
         padding: 5px;
         border: 1px solid var(--grey);
-          @media only screen and(min-width: 600px){ 
-            width: auto;
+          @media only screen and(min-width: 400px){ 
+            width: 200px;
           }
       }
       input[type="radio"]{
@@ -64,7 +73,15 @@
       input[type="date"]{
         margin-top: 5px;
       }
+      .multiple-inputs{
+        @include Flexbox(column, center, flex-end);
+        width: 100%;
+        @media only screen and(min-width: 400px){ 
+          width: 200px;
+        }
+      }
     }
+
     .choice{
       @include Flexbox(column, flex-start, center);
       padding-top: 30px;
@@ -76,25 +93,27 @@
         padding-bottom: 10px;
         @media only screen and(min-width: 400px){ 
           @include Flexbox(row, center, center);
-          margin-left: 10px;
+          padding: 10px 20px 10px 20px;
         }
         label{
           padding: 0px 10px 0px 0px;
         }
-
+      }
+      .border{
+        border-left: solid 1px var(--secondary);
       }
      
     }
     .form-footer{
       padding: 40px 10px 30px 10px;
       width: 100%;
-      @media only screen and(min-width: 600px){ 
+      @media only screen and(min-width: 400px){ 
         @include Flexbox(row, center, center);
         width: 50%;
       }
       button{
         width: 100%;
-        @media only screen and(min-width: 600px){ 
+        @media only screen and(min-width: 400px){ 
           width: 50%;
         }
       }

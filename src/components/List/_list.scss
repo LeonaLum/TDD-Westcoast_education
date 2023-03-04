@@ -1,10 +1,6 @@
 
   h2{
-    font-weight: 300;
-    font-size: 1.4rem;
-    padding: 30px 20px;
-    background-color: inherit;
-    color: var(--black);
+   @include headingH2;
   }
   .list{
     @include Flexbox(column, center, space-evenly);

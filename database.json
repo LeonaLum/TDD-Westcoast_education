@@ -41,6 +41,15 @@
         "Psychology",
         "Chemistry"
       ]
+    },
+    {
+      "id": 3,
+      "firstName": "",
+      "lastName": "",
+      "personalNr": "",
+      "email": "",
+      "phoneNr": "",
+      "skills": ""
     }
   ]
 }

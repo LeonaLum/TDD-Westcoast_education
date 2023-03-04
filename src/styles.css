@@ -19,7 +19,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 100%;
-  background-color: var(--offwhite);
 }
 
 ul {
@@ -66,6 +65,7 @@ a, a:visited, a:active {
 }
 
 h2 {
+  text-transform: uppercase;
   font-weight: 300;
   font-size: 1.4rem;
   padding: 30px 20px;
@@ -163,16 +163,24 @@ h2 {
   background-color: inherit;
 }
 
+@media only screen and (min-width: 400px) {
+  .detail-view .detail-list {
+    border-left: solid 1px var(--grey);
+    padding: 0px 20px 20px 20px;
+  }
+}
+
 .detail-view .detail-list h2 {
-  margin-top: 30px;
-  font-size: 1.7rem;
-  padding: 30px auto;
-  color: var(--textDark);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4rem;
+  padding: 30px 20px;
+  background-color: inherit;
+  color: var(--black);
 }
 
 .detail-view .detail-list li {
-  padding: 20px;
-  border-left: solid 1px var(--grey);
+  padding: 5px;
 }
 
 .detail-view .detail-list li p {
@@ -286,14 +294,22 @@ h2 {
           justify-content: flex-start;
   height: inherit;
   width: inherit;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  .add-form {
+    width: 100%;
+  }
 }
 
 .add-form h2 {
+  text-transform: uppercase;
   font-weight: 300;
-  margin-top: 30px;
-  font-size: 1.7rem;
-  padding: 30px auto;
-  color: var(--textMedium);
+  font-size: 1.4rem;
+  padding: 30px 20px;
+  background-color: inherit;
+  color: var(--black);
 }
 
 .add-form legend {
@@ -303,10 +319,16 @@ h2 {
   padding-left: 10px;
 }
 
+@media only screen and (min-width: 400px) {
+  .add-form legend {
+    text-align: center;
+  }
+}
+
 .add-form h3 {
   padding-left: 10px;
   background-color: inherit;
-  color: var(--textMedium);
+  color: var(--secondary);
   margin: 20px 0px;
   font-weight: 400;
 }
@@ -314,10 +336,10 @@ h2 {
 .add-form .form-section {
   width: 100%;
   margin-top: 10px;
-  padding: 10px;
+  padding-right: 10px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .add-form .form-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -353,7 +375,7 @@ h2 {
   padding: 10px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .add-form .form-section .field-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -368,7 +390,7 @@ h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 50%;
+    width: 400px;
   }
 }
 
@@ -390,18 +412,27 @@ h2 {
   background-color: inherit;
   font-weight: 400;
   font-size: 0.8em;
+  padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  .add-form .form-section .field-section label {
+    padding-bottom: 0px;
+  }
 }
 
 .add-form .form-section .field-section input {
+  font-size: 12px;
+  letter-spacing: 0.5px;
   width: 100%;
   border-radius: 5px;
   padding: 5px;
   border: 1px solid var(--grey);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .add-form .form-section .field-section input {
-    width: auto;
+    width: 200px;
   }
 }
 
@@ -412,6 +443,29 @@ h2 {
 
 .add-form .form-section .field-section input[type="date"] {
   margin-top: 5px;
+}
+
+.add-form .form-section .field-section .multiple-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+  .add-form .form-section .field-section .multiple-inputs {
+    width: 200px;
+  }
 }
 
 .add-form .form-section .choice {
@@ -481,7 +535,7 @@ h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 10px;
+    padding: 10px 20px 10px 20px;
   }
 }
 
@@ -489,12 +543,16 @@ h2 {
   padding: 0px 10px 0px 0px;
 }
 
+.add-form .form-section .choice .border {
+  border-left: solid 1px var(--secondary);
+}
+
 .add-form .form-section .form-footer {
   padding: 40px 10px 30px 10px;
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .add-form .form-section .form-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -517,7 +575,7 @@ h2 {
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   .add-form .form-section .form-footer button {
     width: 50%;
   }
