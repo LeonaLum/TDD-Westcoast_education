@@ -14,6 +14,14 @@ ul{
   list-style: none;
 }
 
+input:focus{
+   outline-color: var(--secondary);
+}
+
+input[type="radio"]{
+  color: red;
+  background-color: red;
+}
 
 .App{
   height: 100vh;

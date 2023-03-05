@@ -8,6 +8,7 @@
   }
   h2{
     @include headingH2;
+    @include thinBorder;
   }
   
   legend{
@@ -62,6 +63,10 @@
         border-radius: 5px;
         padding: 5px;
         border: 1px solid var(--grey);
+        &:invalid{
+          border-color: red;
+        }
+
           @media only screen and(min-width: 400px){ 
             width: 200px;
           }
@@ -100,7 +105,9 @@
         }
       }
       .border{
+        @media only screen and(min-width: 400px){ 
         border-left: solid 1px var(--secondary);
+        }
       }
      
     }
@@ -108,8 +115,12 @@
       padding: 40px 10px 30px 10px;
       width: 100%;
       @media only screen and(min-width: 400px){ 
-        @include Flexbox(row, center, center);
+        @include Flexbox(column, center, center);
         width: 50%;
+      }
+      .validation-text{
+        min-height: 20px;
+        color: red;
       }
       button{
         width: 100%;

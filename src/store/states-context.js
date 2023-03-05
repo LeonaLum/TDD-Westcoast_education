@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const StatesContext = createContext({
   courses: [],
@@ -9,7 +10,13 @@ export const StatesContextProvider = (props) => {
   const [courses, setCoursesData] = useState("");
   const [teachers, setTeachersData] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
+  const navigateToPage = (path) => {
+    navigate(path);
+    setShowModal(false);
+    fetchData();
+  }
 
   const fetchData = () => {
     fetch('http://localhost:8000/courses')
@@ -34,7 +41,8 @@ export const StatesContextProvider = (props) => {
       teachers,
       showModal,
       setShowModal,
-      fetchData
+      fetchData,
+      navigateToPage
     }}>
       {props.children}
     </StatesContext.Provider>

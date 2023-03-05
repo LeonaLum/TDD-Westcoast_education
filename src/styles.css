@@ -25,6 +25,15 @@ ul {
   list-style: none;
 }
 
+input:focus {
+  outline-color: var(--secondary);
+}
+
+input[type="radio"] {
+  color: red;
+  background-color: red;
+}
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -115,6 +124,11 @@ h2 {
   margin-top: 7px;
   font-size: 0.8rem;
   color: var(--textMedium);
+}
+
+.list .list-item .skills {
+  color: var(--secondary);
+  padding: 20px;
 }
 
 .list .list-item .li-footer {
@@ -310,6 +324,7 @@ h2 {
   padding: 30px 20px;
   background-color: inherit;
   color: var(--black);
+  border-bottom: var(--grey) 1px solid;
 }
 
 .add-form legend {
@@ -430,6 +445,10 @@ h2 {
   border: 1px solid var(--grey);
 }
 
+.add-form .form-section .field-section input:invalid {
+  border-color: red;
+}
+
 @media only screen and (min-width: 400px) {
   .add-form .form-section .field-section input {
     width: 200px;
@@ -543,8 +562,10 @@ h2 {
   padding: 0px 10px 0px 0px;
 }
 
-.add-form .form-section .choice .border {
-  border-left: solid 1px var(--secondary);
+@media only screen and (min-width: 400px) {
+  .add-form .form-section .choice .border {
+    border-left: solid 1px var(--secondary);
+  }
 }
 
 .add-form .form-section .form-footer {
@@ -557,10 +578,10 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -569,6 +590,11 @@ h2 {
             justify-content: center;
     width: 50%;
   }
+}
+
+.add-form .form-section .form-footer .validation-text {
+  min-height: 20px;
+  color: red;
 }
 
 .add-form .form-section .form-footer button {
@@ -636,6 +662,11 @@ h2 {
 .button:hover {
   cursor: pointer;
   background-color: var(--secondary);
+}
+
+.button:disabled {
+  background-color: grey;
+  pointer-events: none;
 }
 
 .modal {

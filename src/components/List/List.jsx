@@ -1,13 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import Button from "../Button/Button";
+import StatesContext from "../../store/states-context";
 
 const List = ({data, type }) => {
 
-  const navigate = useNavigate();
-
-  const navigateToPage = (path) => {
-    navigate(path);
-  }
+  let {navigateToPage} = useContext(StatesContext);
 
   return ( 
      <ul className="list" data-testid="List-component">
@@ -22,10 +19,13 @@ const List = ({data, type }) => {
               key == "title" ? (<h3>{item[key]}</h3>) :
               key == "startDate" ? (<p>{`${key}: ${item[key]}`}</p>) :
               key == "firstName" ? (<h3>{`${item["firstName"]} ${item["lastName"]}`}</h3>) :
-              key == "skills" ? (<p>{`${key}: ${item["skills"]}`}</p>) :
-              ("" )
+              key == "skills" ? (
+              <p>{`${key}: ${item["skills"]}`}</p>
+              ) : ("")
              ))
+             
              }
+
           <footer className="li-footer">
             <Button 
               text="See more" 

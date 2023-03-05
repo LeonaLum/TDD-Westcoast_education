@@ -13,11 +13,13 @@ let getCustomization = (color, bgColor, minHeight, minWidth, fontSize, fontWeigh
 
 const Button = ({
   text, func, color, bgColor, 
-  minHeight, minWidth, fontSize, fontWeight}) => {
+  minHeight, minWidth, fontSize, fontWeight, disabled}) => {
   return ( 
 
     <button  className="button" onClick={func}
-             style={getCustomization(color, bgColor, minHeight, minWidth, fontSize, fontWeight)}>
+             disabled={disabled}
+             style={getCustomization(color, bgColor, minHeight, minWidth, fontSize, fontWeight)}
+          >
       {text ? text : "Button"}
     </button>
    );

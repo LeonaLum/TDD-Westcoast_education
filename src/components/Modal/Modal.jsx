@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 import StatesContext from "../../store/states-context";
 
-const Modal = ({message}) => {
+const Modal = ({message, buttonText, func}) => {
 
   let {modal, setShowModal, fetchData} = useContext(StatesContext);
 
@@ -21,7 +21,7 @@ const Modal = ({message}) => {
         <h2 className="modal-header">
              {message}
         </h2>
-        <Button text="Ok" func={() => confirm()}/>
+        <Button text={buttonText ? buttonText : "ok"} func={func ? func : () => confirm()}/>
 
       </div>
 
