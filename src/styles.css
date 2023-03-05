@@ -433,10 +433,11 @@ h2 {
 @media only screen and (min-width: 400px) {
   .add-form .form-section .field-section label {
     padding-bottom: 0px;
+    max-width: 170px;
   }
 }
 
-.add-form .form-section .field-section input {
+.add-form .form-section .field-section input, .add-form .form-section .field-section textarea {
   font-size: 12px;
   letter-spacing: 0.5px;
   width: 100%;
@@ -445,12 +446,12 @@ h2 {
   border: 1px solid var(--grey);
 }
 
-.add-form .form-section .field-section input:invalid {
+.add-form .form-section .field-section input:invalid, .add-form .form-section .field-section textarea:invalid {
   border-color: red;
 }
 
 @media only screen and (min-width: 400px) {
-  .add-form .form-section .field-section input {
+  .add-form .form-section .field-section input, .add-form .form-section .field-section textarea {
     width: 200px;
   }
 }

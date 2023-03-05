@@ -143,11 +143,11 @@ const submitData = (e, choice) => {
           </section>
           <section className="field-section">
               <label htmlFor="description">Description of the course:</label>
-              <input type="text" 
+              <textarea
                      id="description" 
                      name="description" 
                      ref={(element) => courseRefs.push(element)}
-                     required/>
+                     />
           </section>
           <footer className="form-footer">
           {validationText && <div className="validation-text">Please fill in all fields!</div>}
