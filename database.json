@@ -23,6 +23,22 @@
       "length": "2023-03-22 - 2023-03-08",
       "description": "ASDFGHJ",
       "startDate": "2023-03-22"
+    },
+    {
+      "id": 4,
+      "courseNumber": "dghjk",
+      "title": "wqeghjkl",
+      "length": "2023-03-08 - 2023-03-23",
+      "description": "wwerghuk",
+      "startDate": "2023-03-08"
+    },
+    {
+      "id": 5,
+      "courseNumber": "dfsgtfh",
+      "title": "egyj",
+      "length": "2023-03-09 - 2023-03-30",
+      "description": "qwertyuk",
+      "startDate": "2023-03-09"
     }
   ],
   "teachers": [
@@ -49,6 +65,24 @@
         "Psychology",
         "Chemistry"
       ]
+    },
+    {
+      "id": 3,
+      "firstName": "t",
+      "lastName": "t",
+      "personalNr": "t",
+      "email": "t",
+      "phoneNr": "t",
+      "skills": "t"
+    },
+    {
+      "id": 4,
+      "firstName": "t",
+      "lastName": "t",
+      "personalNr": "t",
+      "email": "t",
+      "phoneNr": "t",
+      "skills": "t"
     }
   ]
 }

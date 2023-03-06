@@ -50,6 +50,7 @@ let checkInputValues = (choice) => {
 
 const submitData = (e, choice) => {
   e.preventDefault();
+  console.log(courseRefs)
   if(choice == "courses"){
     if(checkInputValues(courseRefs) == true){
       let objPackage = { 
@@ -98,7 +99,7 @@ const submitData = (e, choice) => {
 
   return ( 
     <>
-    {showModal && <Modal message="The data was saved" btnText="ok" func={() => navigateToPage(teacher ? "teachers" : "courses")}/>}
+    {showModal && <Modal message="The data was saved!" btnText="ok" func={() => navigateToPage(teacher ? "teachers" : "courses")}/>}
     <form className="add-form" ref={formRef} data-testid="AddForm-component">
       <h2>Add new</h2>
       <section className="form-section">
@@ -141,7 +142,7 @@ const submitData = (e, choice) => {
                 <input type="date" id="length" name="length" ref={(element) => courseRefs.push(element)} required/>
               </div>
           </section>
-          <section className="field-section">
+          <section className="field-section description">
               <label htmlFor="description">Description of the course:</label>
               <textarea
                      id="description" 

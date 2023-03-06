@@ -6,13 +6,16 @@
   background-color: rgba(0, 0, 0, 0.389);
   .modal-inner{
     @include Flexbox(column, center, center);
-    padding: 30px 20px;
     border-radius: 5px;
     height: 30%;
-    width: 50%;
     background-color: white;
+      width: 100%;
+      @media only screen and(min-width: 400px){ 
+        width: 50%;
+       }
     .modal-header{
-      color: var(--primary);
+      font-size: 15px;
+      color: var(--textDark);
       padding-bottom: 20px;
     }
   }

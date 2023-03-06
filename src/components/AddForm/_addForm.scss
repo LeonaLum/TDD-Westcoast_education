@@ -19,9 +19,6 @@
     @media only screen and(min-width: 400px){
       text-align: center;
     }
-    strong{
-
-    }
   }
   h3{
     padding-left: 10px;
@@ -87,6 +84,20 @@
         }
       }
     }
+    .description{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      label, textarea{
+        width: 100%;
+      }
+      textarea{
+        min-height: 100px;
+      }
+      label{
+        padding-bottom: 10px;
+      }
+    }
 
     .choice{
       @include Flexbox(column, flex-start, center);
@@ -95,6 +106,7 @@
         @include Flexbox(row, flex-start, center);
       }
       .radio-choices{
+        min-width: 120px;
         @include Flexbox(row, center, space-between);
         padding-bottom: 10px;
         @media only screen and(min-width: 400px){ 
