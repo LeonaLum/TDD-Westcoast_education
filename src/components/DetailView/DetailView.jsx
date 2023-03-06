@@ -43,7 +43,7 @@ const DetailView = () => {
              Object.entries(objectData).map((entry, index) => (
               entry[0] == "id" ? "":
               (
-                <p>
+                <p className={entry[index] == "description" ? "description" : ""}>
                   <strong>
                   <span>{handleKey(entry[0])}</span>:
                   </strong> 

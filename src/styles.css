@@ -172,7 +172,7 @@ h2 {
   background-color: inherit;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 830px) {
   .detail-view .detail-list {
     border-left: solid 1px var(--grey);
     padding: 0px 20px 20px 20px;
@@ -186,10 +186,38 @@ h2 {
   padding: 30px 20px;
   background-color: inherit;
   color: var(--black);
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 830px) {
+  .detail-view .detail-list h2 {
+    margin-left: 80px;
+    border-bottom: var(--grey) 1px solid;
+  }
 }
 
 .detail-view .detail-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
+}
+
+@media only screen and (min-width: 830px) {
+  .detail-view .detail-list li {
+    margin: 0px 50px 0px 50px;
+    padding: 20px 50px 20px 50px;
+  }
 }
 
 .detail-view .detail-list li p {
@@ -206,6 +234,8 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 13px;
+  width: 100%;
   padding-bottom: 20px;
   text-align: left;
   color: var(--textLight);
@@ -224,10 +254,30 @@ h2 {
 }
 
 .detail-view .detail-list li p .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
   color: var(--textLight);
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 830px) {
+  .detail-view .detail-list li p .info {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 830px) {
   .detail-view .detail-list li p {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -245,6 +295,10 @@ h2 {
     border-bottom: none;
     padding-bottom: 0px;
   }
+}
+
+.detail-view .detail-list li .details {
+  background-color: red;
 }
 
 .detail-view .detail-list li .li-footer {
@@ -268,7 +322,7 @@ h2 {
   width: 100%;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 830px) {
   .detail-view .detail-list li .li-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -645,30 +699,114 @@ h2 {
           justify-content: flex-start;
   padding-top: 50px;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+}
+
+.home .welcome-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 10px 20px 10px;
 }
 
 @media only screen and (min-width: 600px) {
-  .home {
-    width: 70%;
+  .home .welcome-container {
+    padding: 20px 50px 20px 50px;
   }
 }
 
-.home h2 {
+.home .welcome-container h2 {
+  padding: 0px;
+  padding-bottom: 10px;
   font-size: 1.7rem;
   font-weight: 900;
   color: var(--primary);
 }
 
 @media only screen and (min-width: 600px) {
-  .home h2 {
+  .home .welcome-container h2 {
     font-size: 1.8rem;
   }
 }
 
-.home p {
+.home .welcome-container p {
+  color: var(--textMedium);
   font-size: 0.9rem;
   width: 90%;
+}
+
+.home .cards-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .home .cards-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.home .cards-section .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  border: dashed 1px var(--secondary);
+}
+
+.home .cards-section .card .card-inner {
+  padding: 20px;
+}
+
+.home .cards-section .card .card-inner h3 {
+  text-align: center;
+  color: var(--secondary);
+  font-weight: 900;
+}
+
+.home .cards-section .card .card-inner .icon-container {
+  padding-top: 20px;
+  text-align: center;
 }
 
 .button {

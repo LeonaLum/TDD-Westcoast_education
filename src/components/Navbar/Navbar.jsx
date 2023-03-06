@@ -27,7 +27,7 @@ const Navbar = () => {
       <li className="desktop-items">
         <NavLink to="/add">Add course or teacher</NavLink>
       </li>
-      <li className="menu-icon" onClick={() => toggleMenu()}> <MenuIcon /></li>
+      <li className="menu-icon" onClick={() => toggleMenu()}> <MenuIcon fontSize="large" /></li>
     </ul>
   </nav>
    {mobileMenu &&
